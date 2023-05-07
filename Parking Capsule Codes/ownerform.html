@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="ownerform.css">
+   <title>Parking Owner Sign up</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Parking Capsule</div>
+        <nav>
+          <a href="Sign up & in.html">Sign In</a>
+          <a href="Sign up & in.html" class="signup">Sign Up</a>
+        </nav>
+      </header>
+    <img id="poill" src="poill.svg" alt="parkingowner">
+    <div class="container">
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+            
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Enter your first name" required>
+                        </div>
+            
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Enter your last name" required>
+                        </div>
+            
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Enter your email" required>
+                        </div>
+            
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Confirm Password</label>
+                            <input type="password" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="details ID">
+                    <span class="title">Garage Details</span>
+            
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>City</label>
+                            <input type="text" placeholder="Enter the city" required>
+                        </div>
+            
+                        <div class="input-field">
+                            <label>Street</label>
+                            <input type="number" placeholder="Enter the street number" required>
+                        </div>
+            
+                        <div class="input-field">
+                            <label>Detailed Describton</label>
+                            <input type="text" placeholder="Ex: Head to Abo-Elfeda behind BIS Campus" required>
+                        </div>
+            
+                        <div class="input-field">
+                            <label>Garage Name</label>
+                            <input type="text" placeholder="Enter your garage name" required>
+                        </div>
+            
+                        <div class="input-field">
+                            <label>Booking Type</label>
+                            <select name="BookingType" id="BookingType">
+                                <option value="hourly">Hourly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="monthly">Both</option>
+                            </select>         
+                        </div>
+            
+                        <div class="input-field">
+                            <label>License Number</label>
+                            <input type="number" placeholder="Enter License Number" required>
+                        </div>
+                    </div>
+            
+                    <button class="nextBtn">
+                        <span class="btnText">SIGN UP</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
