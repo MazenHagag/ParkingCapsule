@@ -2,7 +2,6 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -13,6 +12,7 @@ body{
   align-items: center;
   justify-content: center;
   background: white;
+  
 }
 header {
     position: fixed;
@@ -67,19 +67,20 @@ nav a {
   
 
 #poill {
-    position: absolute;
     bottom: 0;
     left: 0;
+    max-width: 100%;
+    height: auto;
   }
  
 
 .container{
-  position: relative;
   max-width: 1200px;
   width: 100%;
   border-radius: 6px;
   padding: 30px;
   padding-top: 80px; 
+  position: relative;
 }
 
 .container header{
@@ -98,6 +99,7 @@ nav a {
     border-radius: 8px;
     background-color: #00A3FF;
 }
+
 .container form {
     display: flex;
     flex-direction: column;
@@ -108,7 +110,10 @@ nav a {
     min-height: 490px;
     background-color: #fff;
     overflow: hidden;
+    
   }
+
+  
   .nextBtn {
     display: inline-block;
     width: 120px;
@@ -117,7 +122,7 @@ nav a {
     background-color: #00a3ff;
     color: #fff;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: bold;
     text-align: center;
     line-height: 40px;
     margin-top: 16px;
@@ -220,7 +225,7 @@ input[type="password"]:focus {
 }
 .container form .btnText{
     font-size: 14px;
-    font-weight: 400;
+    font-weight: bold;
 }
 form button:hover{
     background-color:#0088d6 ;
@@ -255,3 +260,15 @@ form .buttons button , .backBtn{
         width: 100%;
     }
 }
+@media (max-width: 768px) {
+    #poill {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    #poill {
+        max-width: 80%;
+    }
+}
+ 
