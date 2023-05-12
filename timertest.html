@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Timer Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="timertest.css" >
+  </head>
+  <body>
+    <div class="container">
+        <h1>Parking Timer</h1>
+        <button id="checkout">Check Out</button>
+        <div id="timer-container">
+          <span id="timer">0:00</span>
+          <span>Amount owed: </span>
+          <span id="amount">0</span>
+        </div>
+        <button id="stop">Stop</button>
+      </div>
+      
+      
+      
+      
+      
+<script>
+let startTime;
+let elapsedTime = 0;
+let amountOwed = 0;
+let timerInterval;
+
+function startTimer() {
+  startTime = Date.now();
+  timerInterval = setInterval(updateTimer, 1000);
+}
+
+function updateTimer() {
+  let currentTime = Date.now();
+  elapsedTime = Math.floor((currentTime - startTime) / 1000);
+
+  let hours = Math.floor(elapsedTime / 3600);
+  let minutes = Math.floor((elapsedTime - (hours * 3600)) / 60);
+  let seconds = elapsedTime % 60;
+
+  let timerText = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  document.getElementById("timer").textContent = timerText;
+
+  let amount = (hours + 1) * 5;
+  if (amount !== amountOwed) {
+    amountOwed = amount;
+    document.getElementById("amount").textContent = amountOwed;
+  }
+}
+
+
+function stopTimer() {
+  clearInterval(timerInterval);
+  let hoursElapsed = Math.floor(elapsedTime / 3600);
+  let amount = (hoursElapsed + 1) * 5;
+  amountOwed = amount;
+  document.getElementById("amount").textContent = amountOwed;
+  elapsedTime = 0; // reset elapsed time when timer is stopped
+}
+
+document.getElementById("checkout").addEventListener("click", function() {
+  amountOwed = 5;
+  document.getElementById("amount").textContent = amountOwed;
+  startTimer();
+});
+
+document.getElementById("stop").addEventListener("click", stopTimer);
+
+
+
+    </script>
+  </body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Booking Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="BookingConfirmation.css">
+  </head>
+  <body>
+    <header>
+        <div class="logo">Parking Capsule</div>
+        <nav>
+          <a href="Sign up & in.html">Sign In</a>
+          <a href="Sign up & in.html" class="signup">Sign Up</a>
+        </nav>
+      </header>
+      <div class="menu-icons-container">
+        <img src="Resources/Search.svg" alt="" class="icon"> 
+        <img src="Resources/Profile.svg" alt="" class="icon"> 
+        <img src="Resources/Cart.svg" alt="" class="icon"> 
+     </div>
+    </header>
+    <div class="center">
+      <img src="Confirm1.svg" alt="Booking Confirmation">
+    </div>
+    <p class="center bold">Your Booking Number is:</p>
+    <p class="center unique" id="booking-number"></p>
+    <p class="center bold">Notes:</p>
+    <p id="notes" class="center"> Upon arrival show your booking number to the Parking Owner, You're exptected to be there in 30 minutes </p>
+    <p id="notes" class="center"> If your booking number isn't checked in this duration, Your booking will be cancelled </p>
+
+
+    
+    <script>
+      var bookingNumber = Math.floor(Math.random() * 9000000000) + 1000000000;
+      document.getElementById("booking-number").innerHTML = bookingNumber;
+    </script>
+  </body>
+</html>
